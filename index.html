@@ -102,7 +102,7 @@
                 <!-- right side -->
                 <div class="col-8 col-md-11 col-sm-12 full-height">
                     <div class="right_side full-height">
-                        <div class="full-height" v-for="contact in contacts" v-show="contact.visible===true">
+                        <div class="full-height" v-for="(contact , index) in contacts" v-show="currentIndex==index">
                         <!-- Profile -->
                         
                             <div class="profile" >

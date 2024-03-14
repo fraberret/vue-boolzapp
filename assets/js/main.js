@@ -6,7 +6,7 @@ createApp({
     data() {
         
         return {
-            currentIndex:false,
+            currentIndex:0,
             contacts: [
                 {
                     name: 'Michele',
@@ -174,15 +174,9 @@ createApp({
     },
     methods:{
         showChat(index){
-            if(this.contacts[index].visible===false){
-                this.contacts[index].visible=true
-
-            }else if (this.contacts[index].visible===true) {
-                this.contacts[index].visible=false
+            this.currentIndex=index
                 
-            }
-                
-            
+        
         }
     }
 }).mount('#app')
