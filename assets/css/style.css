@@ -8,6 +8,13 @@
     --boolzapp-primary: #009688;
 }
 
+#app{
+    background-color: white;
+    height: 95vh;
+    margin: 1rem auto 2rem;
+    max-width: 1200px;
+}
+
 body {
     height: 100vh;
     overflow: hidden;
