@@ -70,7 +70,7 @@
                         <!-- chats list -->
                         <div class="chats_list">
 
-                            <div class="chat" v-for="chat in contacts">
+                            <div class="chat" v-for="(chat , index) in contacts" @click="showChat(index)">
 
                                 <!-- profile image -->
                                 <div class="image_profile">
@@ -100,54 +100,54 @@
                 </div>
 
                 <!-- right side -->
-                <div class="col-8 col-md-11 col-sm-12 full-height" v-for="contact in contacts">
-                    <div class="right_side full-height" v-if="contact.visible==true">
-
+                <div class="col-8 col-md-11 col-sm-12 full-height">
+                    <div class="right_side full-height">
+                        <div class="full-height" v-for="contact in contacts" v-show="contact.visible===true">
                         <!-- Profile -->
-                        <div class="profile" >
+                        
+                            <div class="profile" >
 
-                            <!-- profile img -->
-                            <div class="profile-img"  >
-                                <img :src="contact.avatar" alt="">
-                                <div class="name">
-                                    <p>{{contact.name}}</p>
-                                    <p class="last_access">Ultimo accesso oggi alle 16:26</p>
+                                <!-- profile img -->
+                                <div class="profile-img">
+                                    <img :src="contact.avatar" alt="">
+                                    <div class="name">
+                                        <p>{{contact.name}}</p>
+                                        <p class="last_access">Ultimo accesso oggi alle 16:26</p>
+                                    </div>
+                                </div>
+
+
+
+                                <!-- profile icon -->
+
+                                <div class="profile_icon">
+                                    <div class="icon-chat">
+                                        <ul>
+                                            <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                                            <li><i class="fa-solid fa-paperclip"></i></li>
+                                            <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
 
+                            <!-- Messages -->
+                            <div class="messages">
 
 
-                            <!-- profile icon -->
 
-                            <div class="profile_icon">
-                                <div class="icon-chat">
-                                    <ul>
-                                        <li><i class="fa-solid fa-magnifying-glass"></i></li>
-                                        <li><i class="fa-solid fa-paperclip"></i></li>
-                                        <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
-                                    </ul>
+                                <div class="message" v-for="message in contact.messages"
+                                    :class="{'green': message.status=='sent' , 'white':message.status==='received'} ">
+                                    <p>{{message.message}}</p>
+
+                                    <a href=""><i class="fa-solid fa-chevron-down"></i></a>
                                 </div>
-                            </div>
-                        </div>
 
-                        <!-- Messages -->
-                        <div class="messages">
-                            
-                                
-                                    
-                                        <div class="message" v-for="message in contact.messages" :class="{'green': message.status=='sent' , 'white':message.status==='received'} ">
-                                            <p>{{message.message}}</p>
 
-                                            <a href=""><i class="fa-solid fa-chevron-down"></i></a>
-                                        </div>
-                                    
-                               
-                                
-                            
-                        </div>
 
-                        <!-- Text area -->
-                        <div class="text_area">
+
+                            </div> 
+                            <div class="text_area">
                             <div class="emoticons">
                                 <i class="fa-regular fa-face-smile"></i>
                             </div>
@@ -160,6 +160,10 @@
                                 <i class="fa-solid fa-microphone"></i>
                             </div>
                         </div>
+                        
+                    </div>
+                        <!-- Text area -->
+                       
 
                     </div>
                 </div>
