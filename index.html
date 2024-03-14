@@ -153,7 +153,7 @@
                             </div>
 
                             <div class="text">
-                                <input type="text" placeholder="Scrivi un messaggio"></input>
+                                <input type="text" placeholder="Scrivi un messaggio" v-model="newMess" @keyup.enter="addMessage(index, newMess)"></input>
                             </div>
 
                             <div class="emoticons">

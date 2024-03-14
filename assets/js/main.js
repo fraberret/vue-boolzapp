@@ -7,6 +7,7 @@ createApp({
         
         return {
             currentIndex:0,
+            newMess:'',
             contacts: [
                 {
                     name: 'Michele',
@@ -176,7 +177,13 @@ createApp({
         showChat(index){
             this.currentIndex=index
                 
-        
+        },
+
+        addMessage(index, newMess){
+            this.contacts[index].messages.push({date:null, message:newMess, status:'sent'})
+            this.newMess=''
         }
     }
+
+
 }).mount('#app')
