@@ -1,3 +1,17 @@
-body{
-    background-color: red;
+:root {
+    --boolzapp-lighter: #ffffff;
+    --boolzapp-lightest: #eaeaea;
+    --boolzapp-light: #b7b9bb;
+    --boolzapp-dark: #b1b1b1;
+    --boolzapp-accent1: #8edafc;
+    --boolzapp-accent2: #d5f9ba;
+    --boolzapp-primary: #009688;
 }
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, rgb(0, 181, 147) 0%, rgb(0, 181, 147) 120px, lightgray 120px, lightgray 100%);
+
+}
+
