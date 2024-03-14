@@ -69,7 +69,7 @@
 
                         <!-- chats list -->
                         <div class="chats_list">
-                            
+
                             <div class="chat" v-for="chat in contacts">
 
                                 <!-- profile image -->
@@ -95,25 +95,22 @@
                                 </div>
 
                             </div>
-
-
-
                         </div>
                     </div>
                 </div>
 
                 <!-- right side -->
-                <div class="col-8 col-md-11 col-sm-12 full-height">
-                    <div class="right_side full-height">
+                <div class="col-8 col-md-11 col-sm-12 full-height" v-for="contact in contacts">
+                    <div class="right_side full-height" v-if="contact.visible==true">
 
                         <!-- Profile -->
-                        <div class="profile">
+                        <div class="profile" >
 
                             <!-- profile img -->
-                            <div class="profile-img">
-                                <img src="./assets/img/avatar_1.jpg" alt="">
+                            <div class="profile-img"  >
+                                <img :src="contact.avatar" alt="">
                                 <div class="name">
-                                    <p>Michele</p>
+                                    <p>{{contact.name}}</p>
                                     <p class="last_access">Ultimo accesso oggi alle 16:26</p>
                                 </div>
                             </div>
@@ -141,11 +138,8 @@
                                         <div class="message"></div>
                                     </div>
                                     <div class="col-8">
-                                        <div class="message green">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos distinctio
-                                                voluptate modi obcaecati enim tempore ducimus aliquid nisi voluptatem
-                                                doloribus voluptas odit, consequuntur, asperiores consectetur quibusdam
-                                                repudiandae cum quisquam animi!
+                                        <div class="message green " v-for="message in contact.messages">
+                                            <p>{{message.message}}
                                             </p>
 
                                             <a href=""><i class="fa-solid fa-chevron-down"></i></a>

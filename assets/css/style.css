@@ -310,7 +310,8 @@ img {
     }
 
     .chats_list {
-        height: calc(100% - 66px);
+        height: calc(100% - 112px);
+        background-color: white;
         
     }
 

@@ -31,7 +31,7 @@ createApp({
                 {
                     name: 'Fabio',
                     avatar: '../assets/img/avatar_2.jpg',
-                    visible: true,
+                    visible: false,
                     messages: [
                         {
                             date: '20/03/2020 16:30:00',
