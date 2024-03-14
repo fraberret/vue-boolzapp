@@ -69,8 +69,34 @@
 
                         <!-- chats list -->
                         <div class="chats_list">
-
                             
+                            <div class="chat" v-for="chat in contacts">
+
+                                <!-- profile image -->
+                                <div class="image_profile">
+                                    <img :src="chat.avatar" alt="">
+                                </div>
+
+                                <div class="center">
+                                    <!-- profile name -->
+                                    <div class="profile_name">
+                                        <p>Michele</p>
+                                    </div>
+
+                                    <!-- message -->
+                                    <div class="undername">
+                                        <p>Lorem ipsum dolor sit amet.</p>
+                                    </div>
+
+                                </div>
+
+                                <div class="time">
+                                    <p>16:15</p>
+                                </div>
+
+                            </div>
+
+
 
                         </div>
                     </div>
@@ -116,7 +142,10 @@
                                     </div>
                                     <div class="col-8">
                                         <div class="message green">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos distinctio voluptate modi obcaecati enim tempore ducimus aliquid nisi voluptatem doloribus voluptas odit, consequuntur, asperiores consectetur quibusdam repudiandae cum quisquam animi!
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos distinctio
+                                                voluptate modi obcaecati enim tempore ducimus aliquid nisi voluptatem
+                                                doloribus voluptas odit, consequuntur, asperiores consectetur quibusdam
+                                                repudiandae cum quisquam animi!
                                             </p>
 
                                             <a href=""><i class="fa-solid fa-chevron-down"></i></a>
@@ -126,7 +155,10 @@
                                 <div class="row">
                                     <div class="col-8">
                                         <div class="message white">
-                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti ut reprehenderit nisi placeat explicabo eos quae amet eligendi aliquam eius, dolorum minima atque enim possimus nam culpa repudiandae repellat dicta?</p>
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti ut
+                                                reprehenderit nisi placeat explicabo eos quae amet eligendi aliquam
+                                                eius, dolorum minima atque enim possimus nam culpa repudiandae repellat
+                                                dicta?</p>
 
                                             <a href=""><i class="fa-solid fa-chevron-down"></i></a>
                                         </div>
