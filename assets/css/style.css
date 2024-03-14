@@ -80,6 +80,7 @@ body {
 
 .col-8 {
     width: calc((100%/12)*8);
+    position: relative;
 }
 
 .col-12 {
@@ -88,10 +89,12 @@ body {
 
 .green {
     background-color: var(--boolzapp-accent2);
+    align-self: self-end;
 }
 
 .white {
     background-color: var(--boolzapp-lighter);
+    align-self: self-start;
 }
 
 img {
@@ -245,6 +248,10 @@ img {
     background-image: url(../img/mine.jpg);
     height: calc(100% - 149.5px);
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+   
 
 }
 
@@ -284,6 +291,8 @@ img {
     margin-bottom: 1rem;
     border-radius: 1rem;
     display: flex;
+    justify-content: space-between;
+    width: 50%;
     
 }
 
