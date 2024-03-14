@@ -166,18 +166,22 @@ img {
 
 .search_bar {
     width: 95%;
-    background-color: var(--boolzapp-lighter);
+    
+    
+    & input{
+        width: 90%;
+        border: none;
+        background-color: var(--boolzapp-lighter);
     padding: 5px 8px;
     margin: 10px;
     color: var(--boolzapp-light);
     box-shadow:100px black;
-    
+    }
+
     
 }
 
-.search_bar>span {
-    padding-left: 1rem;
-}
+
 /* #endregion search bar section */
 
 
