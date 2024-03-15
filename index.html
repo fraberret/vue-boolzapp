@@ -139,6 +139,7 @@
                                 <div class="message" v-for="message in contact.messages"
                                     :class="{'green': message.status=='sent' , 'white':message.status==='received'} ">
                                     <p>{{message.message}}</p>
+                                    <div class="right_mess_side"><p class="state">{{message.status}}</p><p class="date" >{{message.date}}</p></div>
 
                                     <a href=""><i class="fa-solid fa-chevron-down"></i></a>
                                 </div>

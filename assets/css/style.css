@@ -272,6 +272,22 @@ img {
     }
 }
 
+
+.right_mess_side{
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    color: lightgrey;
+& .date{
+    
+    font-size: 10px;
+}
+& .state{
+    text-align: end;
+    font-size: 12px;
+}
+}
+
 .text {
     width: 90%;
 
@@ -293,6 +309,7 @@ img {
     display: flex;
     justify-content: space-between;
     width: 50%;
+    position: relative;
     
 }
 

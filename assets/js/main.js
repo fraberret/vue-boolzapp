@@ -185,7 +185,7 @@ createApp({
             this.newMess=''
             
             setTimeout(()=>{
-                this.contacts[index].messages.push({date:null, message:'Ok', status:'received'})
+                this.contacts[index].messages.push({date: null, message:'Ok', status:'received'})
             },1000)
         },
 
@@ -204,7 +204,8 @@ createApp({
                     contact.visible = true;
                 });
             }
-        }
+        },
+        
     },
     created() {
         // Chiamata alla funzione di ricerca all'avvio dell'applicazione per mostrare tutti i contatti
