@@ -183,13 +183,16 @@ createApp({
         },
 
         addMessage(index, newMess){
-            
-            this.contacts[index].messages.push({date:null, message:newMess, status:'sent'})
+            if (newMess!='') {
+                this.contacts[index].messages.push({date:null, message:newMess, status:'sent'})
             this.newMess=''
-            
             setTimeout(()=>{
                 this.contacts[index].messages.push({date: this.timeStamp, message:'Ok', status:'received'})
             },1000)
+            }
+            
+            
+            
         },
 
         search() {

@@ -213,6 +213,10 @@ img {
     
 }
 
+#send:hover{
+    background-color: lightgrey;
+}
+
     & .profile_name{
         color: black;
         font-size: 18px;
