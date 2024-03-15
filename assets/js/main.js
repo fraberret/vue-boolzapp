@@ -2,6 +2,7 @@ console.log('it works');
 
 const { createApp } = Vue
 
+
 createApp({
     data() {
         
@@ -9,6 +10,7 @@ createApp({
             currentIndex:0,
             newMess:'',
             searchedContact:'',
+            timeStamp:'',
             contacts: [
                 {
                     name: 'Michele',
@@ -181,11 +183,12 @@ createApp({
         },
 
         addMessage(index, newMess){
+            
             this.contacts[index].messages.push({date:null, message:newMess, status:'sent'})
             this.newMess=''
             
             setTimeout(()=>{
-                this.contacts[index].messages.push({date: null, message:'Ok', status:'received'})
+                this.contacts[index].messages.push({date: this.timeStamp, message:'Ok', status:'received'})
             },1000)
         },
 
@@ -206,9 +209,10 @@ createApp({
             }
         },
         
+        
     },
     created() {
-        // Chiamata alla funzione di ricerca all'avvio dell'applicazione per mostrare tutti i contatti
+        
         this.search();
     }
     

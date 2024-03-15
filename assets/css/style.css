@@ -172,7 +172,7 @@ img {
     
     
     & input{
-        width: 90%;
+        width: 80%;
         border: none;
         background-color: var(--boolzapp-lighter);
     padding: 5px 8px;
@@ -191,7 +191,7 @@ img {
 /* #region chat list section */
 .chats_list {
 
-    height: calc(100% - 193.89px);
+    height: calc(100% - 188.89px);
     overflow-y: auto;
     
     max-height: 100%;
@@ -246,7 +246,7 @@ img {
 
 .messages {
     background-image: url(../img/mine.jpg);
-    height: calc(100% - 149.5px);
+    height: calc(100% - 145.5px);
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -269,6 +269,8 @@ img {
     & .emoticons{
         font-size: 25px;
         color: var(--boolzapp-dark);
+        display: flex;
+        gap: 1rem;
     }
 }
 
@@ -289,7 +291,7 @@ img {
 }
 
 .text {
-    width: 90%;
+    width: 80%;
 
     &  input{
         background-color: var(--boolzapp-lighter);
@@ -323,7 +325,7 @@ img {
 /* #region Media Queries */
 
 @media screen and (max-width:991px) {
-    .app {
+    #app {
         height: 100vh;
         margin: 0;
     }
@@ -336,9 +338,13 @@ img {
     }
 
     .chats_list {
-        height: calc(100% - 112px);
+        height: calc(100% - 66px);
         background-color: white;
         
+    }
+
+    #recording{
+        display: none;
     }
 
         
