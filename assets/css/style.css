@@ -210,8 +210,10 @@ img {
     padding: 1rem;
     color: var(--boolzapp-light);
     border: 0.1px solid var(--boolzapp-lightest);
+    position: relative;
+    cursor: pointer;
 
-    & & .time {
+     & .time {
         margin-top: 8px;
 
     }
@@ -228,6 +230,29 @@ img {
         padding-top: 2px;
     }
 
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(211, 211, 211, 0.419);
+        transition: opacity .3s;
+        opacity: 0;
+        z-index: 2;
+    }
+
+    &:hover:before {
+        opacity: 1;
+    }
+
+}
+
+.grey-on-hover {
+
+
+    
 }
 
 .profile-img {
@@ -279,7 +304,7 @@ img {
 
         & #send:hover {
             color: var(--boolzapp-primary);
-            
+
         }
 
         & #recording:hover {
