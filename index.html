@@ -63,7 +63,7 @@
                         <div class="search_bar_container">
                             <div class="search_bar">
                                 <i class="fa-solid fa-magnifying-glass"></i>
-                                <input type="text " placeholder="Cerca o inizia una nuova chat"></input>
+                                <input type="text " placeholder="Cerca o inizia una nuova chat" v-model="searchedContact" @input="search()"></input>
                             </div>
                         </div>
 

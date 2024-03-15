@@ -8,7 +8,7 @@ createApp({
         return {
             currentIndex:0,
             newMess:'',
-            receivedMess:'Ok',
+            searchedContact:'',
             contacts: [
                 {
                     name: 'Michele',
@@ -188,8 +188,17 @@ createApp({
                 this.contacts[index].messages.push({date:null, message:'Ok', status:'received'})
             },1000)
         },
+
+        search(){
+            console.log(this.searchedContact);
+        }
         
     },
+    computed: {
+        searchContact(contact) {
+          return this.contacts.filter(contact => !contact )
+        }
+      }
     
 
 
