@@ -8,6 +8,7 @@ createApp({
         return {
             currentIndex:0,
             newMess:'',
+            receivedMess:'Ok',
             contacts: [
                 {
                     name: 'Michele',
@@ -154,17 +155,17 @@ createApp({
                     visible: false,
                     messages: [
                         {
-                            date: '10/01/2020 15:30:55',
+                            date: ['10/01/2020' , '15:30:55'],
                             message: 'Ciao, andiamo a mangiare la pizza stasera?',
                             status: 'received'
                         },
                         {
-                            date: '10/01/2020 15:50:00',
+                            date: ['10/01/2020', '15:50:00'],
                             message: 'No, l\'ho già mangiata ieri, ordiniamo sushi!',
                             status: 'sent'
                         },
                         {
-                            date: '10/01/2020 15:51:00',
+                            date: ['10/01/2020' , '15:51:00'],
                             message: 'OK!!',
                             status: 'received'
                         }
@@ -182,8 +183,14 @@ createApp({
         addMessage(index, newMess){
             this.contacts[index].messages.push({date:null, message:newMess, status:'sent'})
             this.newMess=''
-        }
-    }
+            
+            setTimeout(()=>{
+                this.contacts[index].messages.push({date:null, message:'Ok', status:'received'})
+            },1000)
+        },
+        
+    },
+    
 
 
 }).mount('#app')
