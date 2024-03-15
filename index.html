@@ -70,7 +70,7 @@
                         <!-- chats list -->
                         <div class="chats_list">
 
-                            <div class="chat" v-for="(chat , index) in contacts" @click="showChat(index)">
+                            <div class="chat" v-for="(chat , index) in contacts" v-show="chat.visible" @click="showChat(index)">
 
                                 <!-- profile image -->
                                 <div class="image_profile">

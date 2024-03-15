@@ -189,16 +189,28 @@ createApp({
             },1000)
         },
 
-        search(){
-            console.log(this.searchedContact);
-        }
+        search() {
+            const searchTerm = this.searchedContact.toLowerCase();
         
-    },
-    computed: {
-        searchContact(contact) {
-          return this.contacts.filter(contact => !contact )
+            // Verifica se l'utente ha inserito del testo nella barra di ricerca
+            if (searchTerm.trim() !== '') {
+                // Se sì, filtra i contatti in base al testo di ricerca
+                this.contacts.forEach(contact => {
+                    contact.visible = contact.name.toLowerCase().includes(searchTerm);
+                });
+            } else {
+                // Se non c'è testo nella barra di ricerca, mostra tutti i contatti
+                this.contacts.forEach(contact => {
+                    contact.visible = true;
+                });
+            }
         }
-      }
+    },
+    created() {
+        // Chiamata alla funzione di ricerca all'avvio dell'applicazione per mostrare tutti i contatti
+        this.search();
+    }
+    
     
 
 
