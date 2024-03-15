@@ -63,14 +63,16 @@
                         <div class="search_bar_container">
                             <div class="search_bar">
                                 <i class="fa-solid fa-magnifying-glass"></i>
-                                <input type="text " placeholder="Cerca o inizia una nuova chat" v-model="searchedContact" @input="search()"></input>
+                                <input type="text " placeholder="Cerca o inizia una nuova chat"
+                                    v-model="searchedContact" @input="search()"></input>
                             </div>
                         </div>
 
                         <!-- chats list -->
                         <div class="chats_list">
 
-                            <div class="chat" v-for="(chat , index) in contacts" v-show="chat.visible" @click="showChat(index)">
+                            <div class="chat" v-for="(chat , index) in contacts" v-show="chat.visible"
+                                @click="showChat(index)">
 
                                 <!-- profile image -->
                                 <div class="image_profile">
@@ -103,9 +105,9 @@
                 <div class="col-8 col-md-11 col-sm-12 full-height">
                     <div class="right_side full-height">
                         <div class="full-height" v-for="(contact , index) in contacts" v-show="currentIndex==index">
-                        <!-- Profile -->
-                        
-                            <div class="profile" >
+                            <!-- Profile -->
+
+                            <div class="profile">
 
                                 <!-- profile img -->
                                 <div class="profile-img">
@@ -116,10 +118,7 @@
                                     </div>
                                 </div>
 
-
-
                                 <!-- profile icon -->
-
                                 <div class="profile_icon">
                                     <div class="icon-chat">
                                         <ul>
@@ -134,39 +133,49 @@
                             <!-- Messages -->
                             <div class="messages">
 
-
-
-                                <div class="message" v-for="message in contact.messages"
+                                <!-- message -->
+                                <div class="message" v-for="(message , index) in contact.messages"
                                     :class="{'green': message.status=='sent' , 'white':message.status==='received'} ">
                                     <p>{{message.message}}</p>
-                                    <div class="right_mess_side"><p class="state">{{message.status}}</p><p class="date" >{{message.date}}</p></div>
 
-                                    <i class="fa-solid fa-chevron-down"></i>
+                                    <!-- message date -->
+                                    <div class="right_mess_side">
+                                        <p class="state">{{message.status}}</p>
+                                        <p class="date">{{message.date}}</p>
+                                    </div>
+
+                                    <!-- dropdown menu -->
+                                    <div class="dropdown">
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                        <div class="dropdown-content">
+                                            <p @click="deleteMessage(currentIndex , index)">Elimina il Messaggio</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- text area -->
+                            <div class="text_area">
+
+                                <!-- left side -->
+                                <div class="emoticons">
+                                    <i id="smile" class="fa-regular fa-face-smile"></i>
                                 </div>
 
+                                <!-- center -->
+                                <div class="text">
+                                    <input type="text" placeholder="Scrivi un messaggio" v-model="newMess"
+                                        @keyup.enter="addMessage(index, newMess)"></input>
+                                </div>
 
-
-
-                            </div> 
-                            <div class="text_area">
-                            <div class="emoticons">
-                                <i id="smile" class="fa-regular fa-face-smile"></i>
-                            </div>
-
-                            <div class="text">
-                                <input type="text" placeholder="Scrivi un messaggio" v-model="newMess" @keyup.enter="addMessage(index, newMess)"></input>
-                            </div>
-
-                            <div class="emoticons">
-                                <i id="send" @click="addMessage(index, newMess)" class="fa-solid fa-paper-plane"></i>
-                                <i id="recording" class="fa-solid fa-microphone"></i>
+                                <!-- right side -->
+                                <div class="emoticons">
+                                    <i id="send" @click="addMessage(index, newMess)"
+                                        class="fa-solid fa-paper-plane"></i>
+                                    <i id="recording" class="fa-solid fa-microphone"></i>
+                                </div>
                             </div>
                         </div>
-                        
-                    </div>
-                        <!-- Text area -->
-                       
-
                     </div>
                 </div>
             </div>

@@ -185,7 +185,9 @@ createApp({
         addMessage(index, newMess){
             if (newMess!='') {
                 this.contacts[index].messages.push({date:null, message:newMess, status:'sent'})
-            this.newMess=''
+            
+                this.newMess=''
+
             setTimeout(()=>{
                 this.contacts[index].messages.push({date: this.timeStamp, message:'Ok', status:'received'})
             },1000)
@@ -203,6 +205,7 @@ createApp({
                 // Se sì, filtra i contatti in base al testo di ricerca
                 this.contacts.forEach(contact => {
                     contact.visible = contact.name.toLowerCase().includes(searchTerm);
+                    
                 });
             } else {
                 // Se non c'è testo nella barra di ricerca, mostra tutti i contatti
@@ -212,7 +215,12 @@ createApp({
             }
         },
         
+        deleteMessage(currentIndex, index) {
+            
+            this.contacts[currentIndex].messages.splice(index , 1)
+        }
         
+
     },
     created() {
         
