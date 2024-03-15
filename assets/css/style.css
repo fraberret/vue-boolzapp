@@ -25,6 +25,7 @@ body {
     background-image: linear-gradient(to bottom, rgb(0, 181, 147) 0%, rgb(0, 181, 147) 120px, lightgray 120px, lightgray 100%);
 
 }
+
 #app {
     height: 95vh;
     margin: 1rem auto 2rem;
@@ -42,6 +43,7 @@ body {
     height: 100%;
     border-right: 1px solid var(--boolzapp-light);
 }
+
 /* #endregion General rules */
 
 
@@ -102,6 +104,7 @@ img {
     width: 50px;
     border-radius: 50%;
 }
+
 /* #endregion Utilities */
 
 
@@ -128,6 +131,7 @@ img {
         font-size: 20px;
     }
 }
+
 /* #endregion profile section */
 
 
@@ -155,12 +159,13 @@ img {
     }
 
 }
+
 /* #endregion notifications section */
 
 
 /* #region search bar section */
 .search_bar_container {
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,19 +174,19 @@ img {
 
 .search_bar {
     width: 95%;
-    
-    
-    & input{
+
+
+    & input {
         width: 80%;
         border: none;
         background-color: var(--boolzapp-lighter);
-    padding: 5px 8px;
-    margin: 10px;
-    color: var(--boolzapp-light);
-    box-shadow:100px black;
+        padding: 5px 8px;
+        margin: 10px;
+        color: var(--boolzapp-light);
+        box-shadow: 100px black;
     }
 
-    
+
 }
 
 
@@ -193,7 +198,7 @@ img {
 
     height: calc(100% - 188.89px);
     overflow-y: auto;
-    
+
     max-height: 100%;
 
 
@@ -202,45 +207,41 @@ img {
 .chat {
     background-color: #fff;
     display: flex;
-    padding:  1rem;
+    padding: 1rem;
     color: var(--boolzapp-light);
     border: 0.1px solid var(--boolzapp-lightest);
 
-    & 
+    & & .time {
+        margin-top: 8px;
 
-    & .time{
-    margin-top: 8px;
-    
-}
+    }
 
-#send:hover{
-    background-color: lightgrey;
-}
 
-    & .profile_name{
+
+    & .profile_name {
         color: black;
         font-size: 18px;
     }
 
-    & .undername{
+    & .undername {
         font-size: 14px;
         padding-top: 2px;
     }
 
 }
 
-.profile-img{
+.profile-img {
     display: flex;
     align-items: center;
     margin-right: 1rem;
-    
+
 }
 
-.name{
+.name {
     padding-left: 1rem;
 }
 
-.center{
+.center {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -255,7 +256,7 @@ img {
     display: flex;
     flex-direction: column;
     padding: 2rem;
-   
+
 
 }
 
@@ -270,36 +271,52 @@ img {
     justify-content: space-around;
     padding: 1rem;
 
-    & .emoticons{
+    & .emoticons {
         font-size: 25px;
         color: var(--boolzapp-dark);
         display: flex;
         gap: 1rem;
+
+        & #send:hover {
+            color: var(--boolzapp-primary);
+            
+        }
+
+        & #recording:hover {
+            color: red;
+        }
+
+        & #smile:hover {
+            color: black;
+        }
+
     }
 }
 
 
-.right_mess_side{
+.right_mess_side {
     position: absolute;
     right: 10%;
     bottom: 0;
     color: lightgrey;
-& .date{
-    
-    font-size: 10px;
-}
-& .state{
-    text-align: end;
-    font-size: 12px;
-}
+
+    & .date {
+
+        font-size: 10px;
+    }
+
+    & .state {
+        text-align: end;
+        font-size: 12px;
+    }
 }
 
 .text {
     width: 80%;
 
-    &  input{
+    & input {
         background-color: var(--boolzapp-lighter);
-        width:100%;
+        width: 100%;
         padding: 1rem;
         border-radius: 10px;
         color: rgb(108, 108, 108);
@@ -316,13 +333,14 @@ img {
     justify-content: space-between;
     width: 50%;
     position: relative;
-    
+
 }
 
-.last_access{
+.last_access {
     font-size: 14px;
     color: rgb(108, 108, 108);
 }
+
 /* #endregion right side section */
 
 
@@ -334,36 +352,38 @@ img {
         margin: 0;
     }
 
-    .left-side{
+    .left-side {
         height: 100vh;
     }
-    .right-side{
+
+    .right-side {
         height: 100vh;
     }
 
     .chats_list {
         height: calc(100% - 66px);
         background-color: white;
-        
+
     }
 
-    #recording{
+    #recording {
         display: none;
     }
 
-        
+
 
     .icon {
         display: none;
     }
 
-    .center{
+    .center {
         display: none;
-        
+
     }
-    .time{
-    display: none;
-}
+
+    .time {
+        display: none;
+    }
 
 
     .search_bar_container {
@@ -411,4 +431,5 @@ img {
         height: 100vh;
     }
 }
+
 /* #endregion Media Queries */
