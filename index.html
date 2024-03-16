@@ -141,8 +141,8 @@
 
                                     <!-- message date -->
                                     <div class="right_mess_side">
-                                        <p class="state">{{message.status}}</p>
-                                        <p class="date">{{message.date}}</p>
+                                        <span class="date">{{message.date}}</span>
+                                        <span class="double_check" v-if="message.status==='sent'" class="state"><i class="fa-solid fa-check-double"></i></span>
                                     </div>
 
                                     <!-- dropdown menu -->
