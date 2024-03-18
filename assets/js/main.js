@@ -1,4 +1,6 @@
-console.log('it works');
+
+
+
 
 const { createApp } = Vue
 
@@ -14,7 +16,7 @@ createApp({
             contacts: [
                 {
                     name: 'Michele',
-                    avatar: '../assets/img/avatar_1.jpg',
+                    avatar: './assets/img/avatar_1.jpg',
                     visible: false,
                     messages: [
                         {
@@ -36,7 +38,7 @@ createApp({
                 },
                 {
                     name: 'Fabio',
-                    avatar: '../assets/img/avatar_2.jpg',
+                    avatar: './assets/img/avatar_2.jpg',
                     visible: false,
                     messages: [
                         {
@@ -58,7 +60,7 @@ createApp({
                 },
                 {
                     name: 'Samuele',
-                    avatar: '../assets/img/avatar_3.jpg',
+                    avatar: './assets/img/avatar_3.jpg',
                     visible: false,
                     messages: [
                         {
@@ -80,7 +82,7 @@ createApp({
                 },
                 {
                     name: 'Alessandro B.',
-                    avatar: '../assets/img/avatar_4.jpg',
+                    avatar: './assets/img/avatar_4.jpg',
                     visible: false,
                     messages: [
                         {
@@ -97,7 +99,7 @@ createApp({
                 },
                 {
                     name: 'Alessandro L.',
-                    avatar: '../assets/img/avatar_5.jpg',
+                    avatar: './assets/img/avatar_5.jpg',
                     visible: false,
                     messages: [
                         {
@@ -114,7 +116,7 @@ createApp({
                 },
                 {
                     name: 'Claudia',
-                    avatar: '../assets/img/avatar_6.jpg',
+                    avatar: './assets/img/avatar_6.jpg',
                     visible: false,
                     messages: [
                         {
@@ -136,7 +138,7 @@ createApp({
                 },
                 {
                     name: 'Federico',
-                    avatar: '../assets/img/avatar_7.jpg',
+                    avatar: './assets/img/avatar_7.jpg',
                     visible: false,
                     messages: [
                         {
@@ -153,7 +155,7 @@ createApp({
                 },
                 {
                     name: 'Davide',
-                    avatar: '../assets/img/avatar_8.jpg',
+                    avatar: './assets/img/avatar_8.jpg',
                     visible: false,
                     messages: [
                         {

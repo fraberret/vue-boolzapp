@@ -65,7 +65,7 @@
                             <div class="search_bar">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                                 <input type="text " placeholder="Cerca o inizia una nuova chat"
-                                    v-model="searchedContact" @input="search()"></input>
+                                    v-model="searchedContact" @input="search()">
                             </div>
                         </div>
 
@@ -142,14 +142,16 @@
                                     <!-- message date -->
                                     <div class="right_mess_side">
                                         <span class="date">{{message.date}}</span>
-                                        <span class="double_check" v-if="message.status==='sent'" class="state"><i class="fa-solid fa-check-double"></i></span>
+                                        <span class="double_check" v-if="message.status==='sent'" class="state"><i
+                                                class="fa-solid fa-check-double"></i></span>
                                     </div>
 
                                     <!-- dropdown menu -->
                                     <div class="dropdown">
                                         <i class="fa-solid fa-chevron-down"></i>
                                         <div class="dropdown-content">
-                                            <p id="delete" @click="deleteMessage(currentIndex , index)">Elimina il Messaggio</p>
+                                            <p id="delete" @click="deleteMessage(currentIndex , index)">Elimina il
+                                                Messaggio</p>
                                             <p>Info</p>
                                         </div>
                                     </div>
